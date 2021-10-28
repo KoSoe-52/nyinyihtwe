@@ -54,6 +54,12 @@ Route::group(array("middleware" => "auth"),function(){
     Route::get("/f6c",[App\Http\Controllers\F6cController::class,'index'])->name('f6c');
     Route::get("/km",[App\Http\Controllers\KmController::class,'index'])->name('km');
     Route::get("/workspace",[App\Http\Controllers\WorkspaceController::class,'index'])->name('workspace');
+    Route::get("/structure/{id}",[App\Http\Controllers\StructureController::class,'show'])->name('structureShow');
+    Route::get("/f3c/{id}",[App\Http\Controllers\F3cController::class,'show'])->name('f3cShow');
+    Route::get("/f6c/{id}/{id2}",[App\Http\Controllers\F6cController::class,'show'])->name('f6cShow');
+    Route::get("/f1c/{id}/{id2}",[App\Http\Controllers\F1cController::class,'show'])->name('f1cShow');
+
+
 
 });
 //hello

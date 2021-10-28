@@ -39,7 +39,7 @@
                 @foreach($structure as $key=>$sastartmodelstructur)
                     <tr>
                         <td>{{$key + 1}}</td>
-                        <td>{{@$sastartmodelstructur->Кодструктуры}}</td>
+                        <td><a href="{{url('/structure/'.$sastartmodelstructur->Кодструктуры)}}">{{@$sastartmodelstructur->Кодструктуры}}</a></td>
                         <td>{{@$sastartmodelstructur->Типструктуры}}</td>
                         <td>{{@$sastartmodelstructur->Родструктуры}}</td>
                         <td>{{@$sastartmodelstructur->Видструктуры}}</td>

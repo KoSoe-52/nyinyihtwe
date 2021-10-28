@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Structure;
+use App\Models\F3c;
 class StructureController extends Controller
 {
     /**
@@ -46,7 +47,8 @@ class StructureController extends Controller
      */
     public function show($id)
     {
-        //
+        $f3c = F3c::where("Кодструктуры","=",$id)->get();
+        return view("f3c.show",compact('f3c'));
     }
 
     /**

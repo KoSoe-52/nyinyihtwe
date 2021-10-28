@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\F1c;
+use App\Models\F2c;
 class F1cController extends Controller
 {
     /**
@@ -44,9 +45,13 @@ class F1cController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,$id2)
     {
-        //
+        $f2c = F2c::where("КодПК_2","=",$id)
+            ->where("Кодструктуры","LIKE",$id2.'%')
+            ->get();
+        //->orWhere('name', 'like', '%' . Input::get('name') . '%')->get();
+        return view("f2c.show",compact("f2c"));
     }
 
     /**

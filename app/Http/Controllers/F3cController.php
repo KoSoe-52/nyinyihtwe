@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\F3c;
-
+use App\Models\F6c;
 class F3cController extends Controller
 {
     /**
@@ -47,7 +47,8 @@ class F3cController extends Controller
      */
     public function show($id)
     {
-        //
+        $f6c = F6c::where("КодПЗ_1","=",$id)->get();
+        return view("f6c.show",compact("f6c"));
     }
 
     /**

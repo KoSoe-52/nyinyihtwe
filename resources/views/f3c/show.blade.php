@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section("title","F3c")
+@section("title","F3c show")
 @section('style')
  <style type="text/css">
     .f3c{
@@ -42,7 +42,7 @@
                     <tr>
                         <td>{{$key + 1}}</td>
                         <td>{{@$f3->Кодструктуры}}</td>
-                        <td>{{@$f3->КодПЗ_1}}</td>
+                        <td><a href="{{url('/f3c/'.$f3->КодПЗ_1)}}">{{@$f3->КодПЗ_1}}</a></td>
                         <td>{{@$f3->НаименованиеПЗ_1}}</td>
                         <td>{{@$f3->Степеньформализации}}</td>
                         <td>{{@$f3->СтатусПЗ_1}}</td>

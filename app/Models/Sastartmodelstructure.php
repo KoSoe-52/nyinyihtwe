@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Sastartmodelstructure extends Model
 {
     use HasFactory;
-    protected $table="составк-моделиизструктур";
+    protected $table="составк_моделиизструктур";
 }
